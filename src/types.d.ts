@@ -3,12 +3,10 @@ type R01App = {
 	domNode: HTMLElement;
 }
 
-type R01ElementParamsChildren = R01ElementParams[] | string[];
-
 type R01ElementParams = {
 	tag: string;
 	props: R01ElementProps;
-	children: R01ElementParamsChildren;
+	children: R01ElementParams[];
 }
 
 type R01NodeElement = {
@@ -17,7 +15,6 @@ type R01NodeElement = {
 	props: R01ElementProps;
 	children: R01NodeElement[];
 	parent: R01NodeElement | null;
-	domNode: HTMLElement;
 }
 
 type MountAppOptions = {
@@ -25,5 +22,5 @@ type MountAppOptions = {
 }
 
 type R01ElementProps = {
-	[key: string]: string | number | boolean;
+	[key: string]: any;
 }

@@ -7,3 +7,18 @@ export const uuid = (length: number = 15): string => {
 
 	return result;
 }
+
+export const isObject = (obj: any): boolean => {
+	return obj !== null && typeof obj === 'object' && !Array.isArray(obj);
+}
+
+export const isFunction = (func: any): boolean => {	
+	return typeof func === 'function';
+}
+export const isString = (str: any): boolean => {
+	return typeof str === 'string';
+}
+
+export const isEventProp = (prop: string): boolean => {
+	return /^on/.test(prop);
+}

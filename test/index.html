@@ -7,16 +7,19 @@
 	<script src="../dist/bundle.js"></script>
 </head>
 <body>
-	<div>123</div>
+	<div id="app"></div>
 	<script>
-		var app = R01.createElement({
+		var app = {
 			tag: 'div',
 			props: { class: 'kuku' },
 			children: [
-				{ tag: 'h1', props: {}, children: [ 'Hello, R01!' ] },
-				{ tag: 'button', props: { onclick: () => alert('Clicked!') }, children: [ 'Click Me' ] }
+				{ tag: 'h1', props: { style: {color: "red" }}, children: ['Hello, R01!'] },
+				{ tag: 'input', props: { placeholder: 'Input Here', name: 'email'}, children: [] },
+				{ tag: 'button', props: { onClick: () => alert('Clicked!') }, children: ['Click Me'] }
 			]
-		})
+		}
+
+		R01.MountApp(app, document.querySelector('#app'))
 	</script>
 </body>
 </html>
