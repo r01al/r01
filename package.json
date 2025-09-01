@@ -1,0 +1,32 @@
+{
+  "name": "r01",
+  "version": "1.0.0",
+  "description": "Template engine inspiered by react!",
+  "homepage": "https://github.com/r01al/r01#readme",
+  "bugs": {
+    "url": "https://github.com/r01al/r01/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r01al/r01.git"
+  },
+  "exports": {
+	".": {
+	  "import": "./dist/bundle.js",
+	  "require": "./dist/bundle.js"
+	}
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "^4.50.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.9.2"
+  }
+}
