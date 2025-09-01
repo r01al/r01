@@ -3,7 +3,7 @@ type R01App = {
 	domNode: HTMLElement;
 }
 
-type R01ElementParamsChildren = R01ElementParams[] | string [];
+type R01ElementParamsChildren = R01ElementParams[] | string[];
 
 type R01ElementParams = {
 	tag: string;

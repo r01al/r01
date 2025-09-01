@@ -11,7 +11,12 @@ export default function createElement (params: R01ElementParams, parent: (R01Nod
 	const el: R01NodeElement = {
 		tag,
 		props,
-		children: children.map((child: R01ElementParams) => {
+		children: children.map((child: R01ElementParamsChildren) => {
+			if (typeof child === 'string') {
+				domNode.innerText = child;
+				return null;
+			}
+
 			return createElement(child, el);
 		}),
 		uuid: uuid(),
